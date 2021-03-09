@@ -1,0 +1,57 @@
+/* 상단 메뉴 */
+.header-top {position: fixed; width: 100%; height: 60px; border-bottom: 1px solid #aaa; z-index: 333; background: #fff;}
+
+header .logo {position: absolute; top: 15px; left: 11%;}
+header .logo .logo-img {display: inline-block; width: 180px; height: 30px; background: url(./img/logo.png) center no-repeat; background-size: 100%;}
+header .logo p.now {display: inline-block; margin-left: 7px; font-size: 1.5em; line-height: 30px; font-weight: 900; color: #aaa;}
+
+header .select {position: absolute; top: 6px; right: -27px;}
+header .select article {width: 20px; height: 20px; color: #aaa; border: 3px solid #aaa; border-radius: 6px; box-sizing: border-box; cursor: pointer; text-align: center; font-weight: 900; font-size: .9em; line-height: 16px;}
+header .select section.select-area {display: none; position: absolute; top: 32px; left: 0; width: 150px; background: #fff; border: 1px solid; box-shadow: 2px 2px 3px #aaa;}
+header .select section.select-area div {padding: 15px 10px;  font-weight: 700; border-bottom: 1px solid #eee;}
+header .select section.select-area div:hover {background: var(--gradient); color: #fff;}
+
+header .hd-top-mem {position: absolute;  height: 60px; top: 0; right: 130px;}
+header .hd-top-mem div {display: inline-block; position: relative; padding: 0 20px;}
+header .hd-top-mem div p {display: block; width: 100%; height: 100%; font-size: 1em; font-weight: 600; line-height: 60px; cursor: pointer;}
+header .hd-top-mem div p a {color: var(--text);}
+header .hd-top-mem div p i {font-size: inherit; line-height: inherit; margin-right: 6px; color: inherit;}
+header .hd-top-mem p:hover, header .hd-top-mem p:hover a, header .hd-top-mem p:hover i, .mem-on, .mem-on i {color: var(--important); }
+
+header section[class|="hd-top-mem-open"] { display:none; position:absolute; right: 0; top: 60px; width: 350px; min-height: 230px; background:#fff ; border: 1px solid var(--text); overflow: hidden; z-index: 333; animation-name: header-down; animation-duration: .8s;}
+header section[class|="hd-top-mem-open"] h3 {margin-bottom: 10px; line-height: 1.6em; font-size: 1.2em; font-weight: 700;}
+header section[class|="hd-top-mem-open"] h3 span.member {font-size: inherit; line-height: inherit; font-weight: inherit; color: var(--important);}
+header section[class|="hd-top-mem-open"] h3 span.member::after {content: "님";}
+
+header section[class|="hd-top-mem-open"] .login-area {width: 100%; height: 100%; padding: 20px 20px; text-align: left;}
+header section[class|="hd-top-mem-open"] .login-area ul li.btn { display: inline-block; padding: 9px 25px; margin: 10px 6px 0 0; background: var(--gray);}
+header section[class|="hd-top-mem-open"] .login-area ul li.btn a {color: #666;}
+header section[class|="hd-top-mem-open"] .login-area ul li.btn:hover {background: var(--gradient);}
+header section[class|="hd-top-mem-open"] .login-area ul li.btn:hover a {color: #fff;}
+
+header section[class|="hd-top-mem-open"] div[class|="logon-area"] {display: inline-block; width: 100%; height: 100%; min-height: 200px; padding: 20px; margin-right: -4px; text-align: left;}
+header section[class|="hd-top-mem-open"] div[class|="logon-area"] .related-logon {all: unset; font-size: .9em; color: #999;}
+header section[class|="hd-top-mem-open"] div[class|="logon-area"] .related-logon:hover {color: #999;}
+header section[class|="hd-top-mem-open"] div[class|="logon-area"] + div[class|="logon-area"] {border-left: 1px solid #ccc}
+header section[class|="hd-top-mem-open"] div[class|="logon-area"] .service {padding: 0;}
+header section[class|="hd-top-mem-open"] div[class|="logon-area"] .service h3.service-tit {margin: 5px 0; font-size: 1em;}
+header section[class|="hd-top-mem-open"] div[class|="logon-area"] .service ul li {font-size: .9em; line-height: 1.6em;}
+header section[class|="hd-top-mem-open"] div[class|="logon-area"] .service ul li::before {content: "-"; margin-right: 4px;}
+header section[class|="hd-top-mem-open"] div[class|="logon-area"] .service ul li a {color: #888;}
+header section[class|="hd-top-mem-open"] div[class|="logon-area"] .service ul li:hover a {color: #444;}
+
+header section[class|="hd-top-mem-open"] .logon-area-r {min-height: 60px !important; background: #eee; text-align: center;}
+header section[class|="hd-top-mem-open"] .logon-area-r ul {text-align: center;}
+header section[class|="hd-top-mem-open"] .logon-area-r ul li {display: inline-block; margin: 10px 0; padding: 0 7px;}
+header section[class|="hd-top-mem-open"] .logon-area-r ul li + li {border-left: 1px solid #aaa;}
+header section[class|="hd-top-mem-open"] .logon-area-r ul li a {font-size: .9em;}
+header section[class|="hd-top-mem-open"] .logon-area-r ul li a:hover {color: var(--important);}
+
+header .top-btn {position: absolute; top: 0; right: 0; width: 130px; height: 60px; text-align: center; line-height: 59px; color: #fff; background: var(--gradient); transition: ease-in-out .5s; z-index: 336; cursor: pointer;}
+header .top-btn:hover {background: var(--gradient); transition: ease-in-out .5s;}
+header .top-btn i {margin-right: 6px; line-height: inherit; color: inherit;}
+
+.dropon {display: block;}
+
+footer .footer-info {position: fixed; bottom: 0; width: 90%; height: 35px; padding: 0px; background: #d1d6d9; border-top: 1px solid #ccc;}    
+footer .footer-info p {font-size: .8em; line-height: 35px; color: #888; text-align: center;}

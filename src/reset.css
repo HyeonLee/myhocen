@@ -1,0 +1,518 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,
+p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,
+kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,
+fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,
+article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,
+nav,section,summary,time,mark,audio,video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 14px;
+    vertical-align: top;
+    background: transparent;
+    font-family: 'Roboto', 'Noto Sans KR', sans-serif, AppleGothic;
+    font-weight: 400;
+    color: #333;
+    letter-spacing: 0;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 100%;
+    height: 100vh;
+    overflow-x: auto;
+    margin: 0 auto;
+    line-height: 1;
+    background: var(--gray);
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display: block;
+}
+
+nav ul,
+li,
+a {
+    list-style: none;
+    text-decoration: none;
+    color: #333;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+li {
+    cursor: pointer;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    background: transparent;
+    cursor: pointer;
+}
+
+div,a,p {
+    box-sizing: border-box;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+button {
+    font-family: 'Noto Sans KR';
+}
+
+abbr[title],
+dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-top: 1px solid #ddd;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px dashed #cccccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+input,
+select {
+    height: 2.5em;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    padding: 0 7px;
+    background-color: #fff;
+    font-family: 'Roboto', 'Noto Sans KR', sans-serif, AppleGothic;
+}
+
+input[type="checkbox"] {
+    height: 1em;
+    border: none;
+}
+
+input[type="file"] {
+    line-height: 2.5em;
+    font-size: .8em;
+    color: #666
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: rgba(52, 50, 144, 0.5);
+}
+
+label {
+    font-size: .9em;
+    color: #666;
+    line-height: 40px;
+}
+
+select {
+    width: 150px;
+    padding: 6px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-size: 1em;
+    cursor: pointer;
+}
+
+sellect::-ms-expand {
+    display: none;
+}
+
+option {
+    height: 40px;
+}
+
+textarea {
+    border: 1px solid #ddd;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: rgba(52, 50, 144, 0.5);
+}
+
+th,
+td {
+    font-size: 16px;
+    border: solid #ddd;
+    border-width: 0 0 1px 1px;
+    line-height: 24px;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 1em;
+    vertical-align: middle;
+}
+
+th {
+    font-weight: 700;
+    color: #333;
+}
+
+th i {
+    margin-top: 5px;
+    margin-left: 3px;
+    cursor: pointer;
+    color: #999;
+}
+
+td i {
+    vertical-align: middle;
+}
+
+tbody tr:nth-child(2n-1) {
+    background: #f1f3f5;
+}
+
+tbody tr:nth-child(2n) {
+    background: #fff;
+}
+
+th:first-child,
+td:first-child {
+    border-left: 0;
+}
+
+th:last-child,
+td:last-child {
+    border-right: 0;
+}
+
+h1 {
+    font-size: 2.2em;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+h3 {
+    font-size: 1.6em;
+}
+
+h4 {
+    font-size: 1.4em;
+}
+
+h5 {
+    font-size: 1.2em;
+}
+
+input[type="radio"] {
+    background: burlywood;
+}
+
+::-webkit-scrollbar {
+    width: 5.2px;
+    height: 5.2px;
+}
+/*******************
+ 공통 코드
+ *******************/
+ .fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-bold {
+    font-weight: 900;
+}
+
+span.text-bold {
+    margin-left: 6px;
+    font-size: 1em;
+}
+
+.wd20 {
+    width: 20%;
+}
+
+.wd30 {
+    width: 30%;
+}
+
+.wd40 {
+    width: 40%;
+}
+
+.wd50 {
+    width: 50%;
+}
+
+.wd60 {
+    width: 60%;
+}
+
+.wd65 {
+    width: 65%;
+}
+
+.wd80 {
+    width: 80%;
+}
+
+.wd100 {
+    width: 100%;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.tcl {
+    text-align: left !important;
+}
+
+.mt10 {
+    margin-top: 10px !important;
+}
+
+.mt20 {
+    margin-top: 20px !important;
+}
+
+.mt30 {
+    margin-top: 30px !important;
+}
+
+.mt40 {
+    margin-top: 40px !important;
+}
+
+.mt50 {
+    margin-top: 50px !important;
+}
+
+.mt60 {
+    margin-top: 60px !important;
+}
+
+.mt70 {
+    margin-top: 70px !important;
+}
+
+.mt80 {
+    margin-top: 80px !important;
+}
+
+.mt90 {
+    margin-top: 90px !important;
+}
+
+.mt100 {
+    margin-top: 100px !important;
+}
+
+.mb10 {
+    margin-bottom: 10px !important;
+}
+
+.mb20 {
+    margin-bottom: 20px !important;
+}
+
+.mb30 {
+    margin-bottom: 30px !important;
+}
+
+.mb40 {
+    margin-bottom: 40px !important;
+}
+
+.mb50 {
+    margin-bottom: 50px !important;
+}
+
+.mb60 {
+    margin-bottom: 60px !important;
+}
+
+.mb70 {
+    margin-bottom: 70px !important;
+}
+
+.mb80 {
+    margin-bottom: 80px !important;
+}
+
+.mb90 {
+    margin-bottom: 90px !important;
+}
+
+.mb100 {
+    margin-bottom: 100px !important;
+}
+
+.pt0 {
+    padding-top: 0 !important;
+}
+
+.pt10 {
+    padding-top: 10px !important;
+}
+
+.pt15 {
+    padding-top: 15px !important;
+}
+
+.pt20 {
+    padding-top: 20px !important;
+}
+
+.pt25 {
+    padding-top: 25px !important;
+}
+
+.pt30 {
+    padding-top: 30px !important;
+}
+
+.pt35 {
+    padding-top: 35px !important;
+}
+
+.pt40 {
+    padding-top: 40px !important;
+}
+
+.pt45 {
+    padding-top: 45px !important;
+}
+
+.pt50 {
+    padding-top: 50px !important;
+}
+
+.pd0 {
+    padding: 0 !important;
+}
+
+.pd40 {
+    padding: 40px !important;
+}
+
+.price {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: var(--important);
+}
+
+.red {
+    color: var(--red);
+    font-weight: 700;
+}
+
+/* 스크롤 바 */
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+/* 스크롤 바 밑의 배경 */
+
+::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 10px;
+}
+
+/* 실질적 스크롤 바 */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}
+
+/* 실질적 스크롤 바 위에 마우스를 올려다 둘 때 */
+
+::-webkit-scrollbar-thumb:active {
+    background: #888;
+}
+
+/* 실질적 스크롤 바를 클릭할 때 */
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+
+/* color chart */
+:root {
+    --gradient : linear-gradient(45deg, #343290, #d71275);
+    --menu-background : linear-gradient(45deg, #333, #2a1954);
+    --white : white;
+    --gray : #eaeef2;
+    --text : #333;
+    --red : #f50a51;
+    --green : lime;
+    --important: #ff0000;
+    --purple : #4a3474;
+}

@@ -1,0 +1,25 @@
+/* 사이드 메뉴 */
+.aside {position: fixed; top:0; left: 0; width: 10%; height: 100%; max-width: 200px; padding: 0 0 10px; background: linear-gradient(45deg, var(--text), #2a1954); z-index: 334; transition: ease-in .5s; box-shadow: 0px 4px 6px #555;}
+
+.aside nav div { cursor: pointer; transition: ease-in .5s;}
+.aside nav div a { display: block; width: 100%; max-width: 200px; height: 45px; line-height: 45px; cursor: pointer; transition: ease-in .5s;}
+.aside nav div span{color: #fff;  font-size: .9em; font-weight: 500;}
+.aside nav div i {min-width: 20px; margin: 0 7px 0 16px; color: #fff; line-height: inherit;}
+
+.aside nav div[class*='aside-drop'] {position: relative; color: #aaa;}
+.aside nav div[class*='aside-drop']:hover, aside nav div[class*='aside-drop'].aside-on {color: #fff !important;}
+.aside nav div[class*='aside-drop']::after {content: '〉'; position: absolute; top: 16.55px; right: 2%; transition: ease-in .3s;}
+.aside nav div[class*='aside-drop'].aside-on::after {transform: rotate(90deg); top: 19px; right: 4%; transition: ease-in .3s;}
+.aside nav div a:hover,  aside nav div.aside-on a, aside nav div:focus {background: var(--gradient);}
+.aside nav div a:hover span, aside nav div a:hover i {color: #fff; }
+.aside nav div.aside-on a span, aside nav div.aside-on a i {color: #fff;}
+
+.aside nav div ul[class*='aside-depth'] {display: none; width: 100%; background: #16073e;}
+.aside nav div ul[class*='aside-depth'] > li {width: 100%;}
+.aside nav div ul[class*='aside-depth'] > li a {padding: 0; background: transparent; text-indent: 20px; color: #ddd;}
+.aside nav div ul[class*='aside-depth'] > li a::before {content: 'ㆍ'; margin-right: 7px;}
+.aside nav div ul[class*='aside-depth'] > li:hover {background: #534772;}
+.aside nav div ul[class*='aside-depth'] > li.on a {background: #534772; color: #fff;}
+.aside nav div[class*='aside-drop'].aside-on ul[class*='aside-depth'] {display: block;}
+
+.aside-top-mem {display: none;}
